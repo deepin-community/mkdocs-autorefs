@@ -1,5 +1,70 @@
-template-repository (1.0-1) unstable; urgency=medium
+mkdocs-autorefs (1.0.1-1) unstable; urgency=medium
 
-  * Initial release
+  * [d62fd37] d/watch: Set compression=gz
+  * [61950d2] New upstream version 1.0.1
+  * [11ef4a6] d/copyright: Update year and email contact data
+  * [6192988] d/control: Add new required build dependency
+  * [e752822] d/rules: Add one test to ignore while build
+  * [4454d91] autopkgtest: Also ignore this one test here
+  * [b802267] autopkgtest: Add python3-pymdownx to dependencies
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sat, 02 Mar 2024 19:52:25 +0100
+
+mkdocs-autorefs (0.5.0-1) unstable; urgency=medium
+
+  * [08c4a63] New upstream version 0.5.0
+  * [c7e9ca9] d/control: Switch to python3-pdm-backend in B-D
+  * [60e4732] d/rules: Use PDM_BUILD_SCM_VERSION for version injecting
+  * [e001c56] d/copyright: Update year data
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sat, 05 Aug 2023 07:30:28 +0200
+
+mkdocs-autorefs (0.4.1-5) unstable; urgency=medium
+
+  * Team upload.
+  * debian/control: Bump Standards-Version to 4.6.2.
+  * debian/control: Move build toolchain packages from Build-Depends to
+    Build-Depends-Indep to avoid FTBFS in -S build.
+      + https://lists.debian.org/debian-devel/2023/07/msg00188.html indicates
+        that B-D-Indep is not required to be installed in source build. This
+        especially leaves the "clean" target affected without build-dep in
+        place.
+
+ -- Boyuan Yang <byang@debian.org>  Tue, 18 Jul 2023 12:08:43 -0400
+
+mkdocs-autorefs (0.4.1-4) unstable; urgency=medium
+
+  * Team upload.
+  * [5755f05] Drop Poetry buildsystem workaround.
+  * [d97a949] d/control: Add missing build-test-dep pytest-cov, pytest-xdist.
+  * [1ac5cec] d/control: Bump Standards-Version to 4.6.1.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 13 Jul 2022 23:06:40 -0400
+
+mkdocs-autorefs (0.4.1-3) unstable; urgency=medium
+
+  * [e3e3b77] Rebuild patch queue from patch-queue branch
+    Added patch:
+    Switch-to-poetry-as-build-system.patch
+    Removed patch:
+    Switch-to-setuptools-as-build-system.patch
+  * [f009954] d/{control,rules}: Switch over to pyproject system
+  * [a7e54fc] d/rules: Adjust the version metainformation injection
+  * [14aba81] d/rules: Remove py.typed file before do packaging
+  * [c10e6a6] d/README.source: Update additional notes due usage of poetry
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Thu, 21 Apr 2022 07:34:18 +0200
+
+mkdocs-autorefs (0.4.1-2) unstable; urgency=medium
+
+  * [9835bdc] d/control: Correct upstream homepage URL
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Thu, 14 Apr 2022 17:50:56 +0200
+
+mkdocs-autorefs (0.4.1-1) unstable; urgency=medium
+
+  * [dacace3] New upstream version 0.4.1
+  * [1c15ef7] First and basic Debianization
+    (Closes: #1009255)
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sun, 10 Apr 2022 08:21:40 +0200
